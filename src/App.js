@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ShowContextProvider from './contexts/ShowContext';
+import Navbar from './components/Navbar';
+import ShowList from './components/ShowList';
+import NewShowForm from './components/NewShowForm';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	return (
+		<div className="App">
+			<ShowContextProvider>
+				<Navbar />
+				<ShowList />
+				<NewShowForm />
+			</ShowContextProvider>
+		</div>
+	);
+};
 
 export default App;

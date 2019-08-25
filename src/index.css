@@ -1,13 +1,122 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #F1F2F1;
+
+}
+
+.App {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  border-radius: 20px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(229deg, rgba(2, 0, 36, 1) 0%, rgba(4, 52, 67, 1) 33%, rgba(13, 138, 159, 1) 100%);
+  color: #fff;
+  animation: fadein 2s;
+
+}
+
+nav {
+  margin: 10px;
+  text-align: center;
+}
+
+nav h1 {
+  padding: 10px;
+  border-bottom: solid #fff 2px;
+  width: 70%;
+  margin: auto;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+
+nav p {
+  padding: 15px;
+  font-size: 1.2rem;
+}
+
+.book-list,
+.empty {
+  margin: 20px;
+}
+
+.book-list ul,
+.empty {
+  list-style-type: none;
+  padding-bottom: 30px;
+  text-align: center;
+  transition: transform 1s;
+
+}
+
+.book-list ul li {
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  background: #CDE1E2;
+  text-transform: uppercase;
+  color: #092B47;
+  font-weight: 600;
+  opacity: 0.9;
+  transition: transform 1s;
+}
+
+.book-list ul li:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.empty:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+form {
+  text-align: center;
+  border: 2px solid transparent;
+  margin-bottom: 50px;
+
+}
+
+input[type="text"] {
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  outline: 0;
+  border: none;
+  font-size: 1.2rem;
+
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 20px auto;
+  width: 40%;
+  padding: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 4;
+  }
 }
